@@ -1,0 +1,18 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "chat app using nodejs with ejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Visal Dharmasiri",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
