@@ -5,7 +5,7 @@ const socket = require('socket.io')
 const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('public'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
 var port = process.env.PORT || 3000;
 
 //Render Index page

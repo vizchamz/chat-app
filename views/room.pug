@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Chat APP
+    link(rel="stylesheet", href="/style.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js")
+  body
+    h1.room-message
+    .window
+      .chat-message
+        #output
+        #feedback
+      .fields
+        input#message(type="text", placeholder="Enter message")
+        button#send Send
+    .online
+      p.users-online Users Online
+      .users
+    script(src="chat.js")

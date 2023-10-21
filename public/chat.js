@@ -5,8 +5,11 @@ const feedback = document.getElementById('feedback');
 const roomMessage = document.querySelector('.room-message');
 const users = document.querySelector('.users');
 
-//Socket server URL
-const socket = io.connect('https://a-chatting-app.herokuapp.com');
+const socket = io("http://localhost:3000")
+
+socket.on('connect', () => {
+    roomMessage.innerHTML += '<p>Connected to the server</p>';
+});
 
 //Fetch URL Params from URL
 const queryString = window.location.search;
@@ -16,7 +19,7 @@ const roomname = urlParams.get('roomname');
 console.log(username, roomname);
 
 //Display the roomname the user is connected to
-roomMessage.innerHTML = `Connected in room ${roomname}`
+roomMessage.innerHTML += `Connected in room ${roomname}`
 
 //Emitting username and roomname of newly joined user to server
 socket.emit('joined-user', {
