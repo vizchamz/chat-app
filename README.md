@@ -1,2 +1,2 @@
 # chat-app
-chat app using nodejs with ejs
+chat app using nodejs with pug template engine and socket.io
